@@ -4,11 +4,13 @@ import LocationCard from './components/LocationCard'
 import useFetch from './hooks/useFetch'
 import getRandomNumber from './utils/getRandomNumber'
 import ResidentsCard from './components/ResidentsCard'
-import './components/styles/Error.css'
 import Pagination from './components/Pagination'
+import './components/styles/form.css'
+import './components/styles/Error.css'
+
 
 function App() {
-  
+
 
   const locationId = getRandomNumber(126)
   const [inputValue, setInputValue] = useState()
@@ -20,10 +22,6 @@ function App() {
   const totalResidents = location?.residents.length
   const lasIndex = currentPage * residentPerPage
   const firstIndex = lasIndex - residentPerPage
-
-  console.log(totalResidents);
-
-
 
 
   useEffect(() => {
@@ -40,21 +38,19 @@ function App() {
 
   return (
     <div>
-      <img className='img_header' src="./img-header.png" alt="img-header" />
-      <form className='form' onSubmit={handleSubmit}>
-        <input className='input' ref={inputLocation} type="text" />
-        <button className='input_btn'>Search</button>
-      </form>
+      <div>
+        <img className='img_header' src="./img-header.png" alt="img-header" />
+        <form className='form' onSubmit={handleSubmit}>
+          <input className='input' ref={inputLocation} type="text" />
+          <button className='input_btn'>Search</button>
+        </form>
+      </div>
       {
         hasError
-          ? <div className="background-img">
-            <div className="space"></div>
-            <div className="wrapper">
-              <div className="img-wrapper">
-                <span>44</span>
-              </div>
-              <h2 className='text_err'>⚠️ "{inputValue}" not found ❌, you must provide an ID from 1 to 126 </h2>
-            </div>
+          ? <div className='container_err'>
+            <img className='img_error' src="./404error.png" alt="img_error" />
+            <h2 className='text_err'>⚠️ "{inputValue}" not found ❌, you must provide an ID from 1 to 126 </h2>
+
           </div>
           : (
             <>
