@@ -1,0 +1,43 @@
+
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #062226;
+    color: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 0.8em;
+    padding: 1em;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.location_name {
+    color: rgb(38, 169, 38);
+    margin-bottom: 0.8em;
+    font-size: 23px;
+}
+
+.location_list {
+  display: flex;
+  gap: 4em;
+
+}
+
+.location_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.location_label {
+   text-align: center;
+}
+
+.location_value {
+    text-align: center;
+    color: #999;
+}
+
