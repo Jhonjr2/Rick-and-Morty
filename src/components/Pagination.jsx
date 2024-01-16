@@ -27,7 +27,7 @@ const Pagination = ({ residentPerPage, currentPage, setCurrentPage, totalResiden
 
     return (
         <div className='pagination_container'>
-            <nav className="pagination is-rounded is- pb-5 mt-6" role="navigation" aria-label="pagination">
+            <nav className="pagination is-rounded pb-5 pt-6 mt-6" role="navigation" aria-label="pagination">
                 <button
                     className={`pagination-previous ml-6 ${currentPage === 1 ? 'is-disabled' : ''}`}
                     onClick={onPreviusPage}
