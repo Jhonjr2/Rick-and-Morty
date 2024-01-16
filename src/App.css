@@ -1,6 +1,7 @@
 .img_header {
     height: 230px;
 }
+
 .resident__container {
     display: flex;
     flex-wrap: wrap;

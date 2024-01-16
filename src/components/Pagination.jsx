@@ -51,8 +51,6 @@ const Pagination = ({ residentPerPage, currentPage, setCurrentPage, totalResiden
                             </li>
                         ))
                     }
-
-
                 </ul>
             </nav>
         </div>
