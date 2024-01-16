@@ -58,7 +58,7 @@ function App() {
         </form>
         <form className='form' onSubmit={handleResident}>
           <input className='input' ref={inputLimit} type="text" />
-          <button className='input_btn'>Limit</button>
+          <button className='input_btn_limit'>Limit-Page</button>
         </form>
       </div>
       {
