@@ -7,19 +7,23 @@
 }
 
 html {
-
   font-family: 'Poppins', sans-serif;
-
+  height: 100vh;
+  background-color: #05292E;
 }
 
 body {
-  height: 100%;
   margin: 0;
   background-color: #05292E;
 
 }
 
-h1, h2, h3, p, ul, hr {
+h1,
+h2,
+h3,
+p,
+ul,
+hr {
 
   margin-top: 0;
 
@@ -35,7 +39,8 @@ ul {
 
 }
 
-input, button {
+input,
+button {
 
   font-family: inherit;
 
@@ -48,16 +53,10 @@ input {
 }
 
 button {
-
   cursor: pointer;
-
 }
 
 img {
-
   width: 100%;
-
   display: block;
-
 }
-
