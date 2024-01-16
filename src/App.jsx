@@ -36,6 +36,18 @@ function App() {
     setInputValue(inputLocation.current.value)
   }
 
+
+  const inputLimit = useRef()
+
+
+  const handleResident = e => {
+    e.preventDefault()
+    const inputValue = inputLimit.current.value
+    setResidentPerPage(inputValue)
+    setCurrentPage(1)
+
+  }
+
   return (
     <div>
       <div>
@@ -44,13 +56,16 @@ function App() {
           <input className='input' ref={inputLocation} type="text" />
           <button className='input_btn'>Search</button>
         </form>
+        <form className='form' onSubmit={handleResident}>
+          <input className='input' ref={inputLimit} type="text" />
+          <button className='input_btn'>Limit</button>
+        </form>
       </div>
       {
         hasError
           ? <div className='container_err'>
             <img className='img_error' src="./404error.png" alt="img_error" />
-            <h2 className='text_err'>⚠️ "{inputValue}" not found ❌, you must provide an ID from 1 to 126 </h2>
-
+            <h2 className='text_err'>⚠️ "{inputValue}" not found ❌, you must provide an ID from 1 to 126 fabian </h2>
           </div>
           : (
             <>
